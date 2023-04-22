@@ -18,10 +18,10 @@ class HighestAndLowest {
         fun mySolution(numbers: String): String {
             val numbersWithoutSpace = numbers.split(" ")
 
-            var numbersMap = mutableSetOf<Int>()
+            val numbersMap = mutableSetOf<Int>()
 
             for (t in numbersWithoutSpace) {
-                numbersMap.add(t.toString().toInt())
+                numbersMap.add(t.toInt())
             }
 
             val sortedNumbersMap = numbersMap.sorted()

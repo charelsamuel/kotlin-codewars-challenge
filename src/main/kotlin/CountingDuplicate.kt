@@ -20,14 +20,14 @@ class CountingDuplicate {
         fun mySolution(text: String): Int {
             val textLowerCase = text.lowercase()
 
-            var textMap = mutableMapOf<Char, Int>()
+            val textMap = mutableMapOf<Char, Int>()
             for (t in textLowerCase) {
                 textMap[t] = 0
             }
 
             for (t in textLowerCase) {
                 val counter = textMap[t]!! + 1
-                textMap.put(t, counter)
+                textMap[t] = counter
             }
 
             val filteredText = textMap.filter {it.value > 1}
